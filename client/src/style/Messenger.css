@@ -1,0 +1,9 @@
+.homepage{
+    height: 100vh;
+    background-color: #DCDCDC;
+}
+.appBar{
+    width: 100%;
+    background-color: #08ac84;
+    height: 27vh;
+}
