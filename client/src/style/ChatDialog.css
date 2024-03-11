@@ -1,0 +1,20 @@
+.chatDialog{
+    background-color: white;
+    width: 100vw;
+    display: flex;
+    height: 100svh;
+    overflow-y: hidden;
+    overflow-x: overlay;
+}
+
+.leftComponent{
+    background-color: burlywood;
+    min-width: 320px;
+    width:615px;
+}
+
+.rightComponent{
+    background-color: azure;
+    width: 73%;
+    min-width: 300px;
+}

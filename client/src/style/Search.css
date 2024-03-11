@@ -1,0 +1,29 @@
+.searchComponent{
+    background-color: #fff;
+    height: 45px;
+    border-bottom: 1px solid #f2f2f2;
+    display: flex;
+    align-items: center;
+}   
+
+.wrapper{
+    position: relative;
+    width: 100%;
+    background-color: #f0f2f5;
+    margin: 0 13px;
+    border-radius: 8px;
+}
+
+.searchIcon{
+    position: absolute;
+    height: 100%;
+    padding: 8px;
+}
+
+.inputBase{
+    font-size: 0.9rem;
+    width: 100%;
+    padding: 16px;
+    height: 15px;
+    padding-left: 65px;
+}

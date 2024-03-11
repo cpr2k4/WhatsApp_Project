@@ -1,8 +1,9 @@
-import React from 'react'
-import {Dialog,List,ListItem, Typography} from '@mui/material';
+import {useContext} from 'react'
+import {Dialog,List,ListItem} from '@mui/material';
 import {qrCodeImage} from "../../constants/constData.js"
 import { GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from 'jwt-decode';
+import {AccountContext} from '../context/AccountProvider.jsx';
 import "../../style/LoginDialog.css";
 
 const dialogStyle = {
@@ -11,24 +12,29 @@ const dialogStyle = {
   marginTop:"12%",
   width:"60%",
   maxWidth:"100%",
-  boxShadow:"none",
+  boxShadow:"0px 4px 28px rgba(0, 0, 0,0.3)",
   overflow:"hidden"
 }
+
 const LoginDialog = () => {
 
   //googleLogin
   const onLoginSuccess = (res)=>{
     const decodedInfo = jwtDecode(res.credential);
-    console.log(decodedInfo);
+    setAccount(decodedInfo);
   }
   const onLoginError = (res)=>{
     console.log(res);
   }
 
+  //context api
+  const {setAccount} = useContext(AccountContext);
+
   return (
     <Dialog
       open={true}
-      PaperProps={{sx:dialogStyle}}>
+      PaperProps={{sx:dialogStyle}}
+      hideBackdrop={true}>
         
         <div className='Component'>
           <div className='left'>

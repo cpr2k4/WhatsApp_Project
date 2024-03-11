@@ -1,0 +1,32 @@
+.header{
+    height: 44%;
+    background-color: #f0f2f5;
+    padding: 0.6rem 0 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttonsBar{
+    display: flex;
+    align-items:center;
+    margin-right: 1rem;
+}
+
+.buttonsBar > *{
+    margin: 0 0.75rem;
+    cursor: pointer;
+}
+
+.profilePic{
+    height: 40px;
+    width: 40px;
+    border-radius:50%;
+    margin-left: 0.75rem;
+}
+
+.status{
+    height: 32px;
+    width: 30px;
+    border-radius:50%;
+}
