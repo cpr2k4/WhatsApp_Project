@@ -12,9 +12,8 @@ const ChatDialog = () => {
             <Menu />
         </div>
         <div className='rightComponent'>
-            <EmptyChat />
+            <EmptyChat/>
         </div>
-
       </div>
     )
 }
