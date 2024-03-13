@@ -3,7 +3,7 @@ import { MoreVert } from '@mui/icons-material'
 import {Menu,MenuItem} from '@mui/material'
 import "../../../style/Menu.css"
 
-const HeaderMenu = () => {
+const HeaderMenu = ({setOpen}) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -34,9 +34,9 @@ const HeaderMenu = () => {
             horizontal:'right'
         }}
       >
-        <MenuItem onClick={handleClose}>New group</MenuItem>
-        <MenuItem onClick={handleClose}>Settings</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        <MenuItem onClick={()=>{handleClose(); setOpen(true);}}>Profile</MenuItem>
+        <MenuItem onClick={()=>{handleClose()}}>Settings</MenuItem>
+        <MenuItem onClick={()=>{handleClose()}}>Logout</MenuItem>
       </Menu>
     </div>
   )

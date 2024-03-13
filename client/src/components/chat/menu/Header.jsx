@@ -19,7 +19,7 @@ const Header = () => {
         <img className="status" src="/story.png" alt="story_icon_img" />
         <img src="/channel.png" alt="channel_log_img" width={32} height={32}/>
         <AddComment sx={{fontSize:"1.40rem"}}/>
-        <HeaderMenu />
+        <HeaderMenu setOpen={setOpen}/>
       </div>
     </div>
     <InfoDrawer open={open} setOpen={setOpen}/>

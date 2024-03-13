@@ -1,6 +1,7 @@
 import React from 'react'
 import { Drawer } from '@mui/material'
 import {ArrowBack} from '@mui/icons-material';
+import Profile from './Profile';
 import "../../../style/InfoDrawer.css"
 
 const InfoDrawer = ({open,setOpen}) => {
@@ -16,9 +17,10 @@ const InfoDrawer = ({open,setOpen}) => {
             <ArrowBack onClick={()=>setOpen(false)} className='arrow' style={{cursor: "pointer"}} />
             <div style={{fontSize:"1.2rem"}}>Profile</div>
          </div>
-         <div>
-
+         <div className='profileComponent'>
+            <Profile />
          </div>
+        
       </Drawer>
     </>
   )
