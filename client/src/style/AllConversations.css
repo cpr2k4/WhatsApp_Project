@@ -1,0 +1,10 @@
+.allconversationsComponent{
+    height: 81vh;
+    overflow: overlay;
+}
+
+.userDivider{
+    margin: 0 0 0 77px;
+    background-color: #ececec;
+    opacity: 0.5;
+}

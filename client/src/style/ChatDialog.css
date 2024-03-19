@@ -8,13 +8,16 @@
 }
 
 .leftComponent{
-    background-color: burlywood;
+    color: black;
+    background-color: white;
     min-width: 320px;
-    width:615px;
+    width: 40%;
+    /* min-width: 320px;
+    width:615px; */
 }
 
 .rightComponent{
     background-color:  #f0f2f5 ;
-    width: 73%;
-    min-width: 300px;
+    min-width: 500px;
+    width: 60%;
 }

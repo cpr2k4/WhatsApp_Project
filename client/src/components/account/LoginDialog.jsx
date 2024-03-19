@@ -3,7 +3,7 @@ import {Dialog,List,ListItem} from '@mui/material';
 import {qrCodeImage} from "../../constants/constData.js"
 import { GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from 'jwt-decode';
-import {AccountContext} from '../context/AccountProvider.jsx';
+import {AccountContext} from "../../context/AccountProvider.jsx";
 import { addUser } from '../../service/api.js';
 import "../../style/LoginDialog.css";
 

@@ -1,5 +1,5 @@
 import {useContext, useState}  from 'react'
-import {AccountContext} from "../../context/AccountProvider";
+import {AccountContext} from "../../../context/AccountProvider.jsx";
 import {AddComment} from '@mui/icons-material';
 import {GroupsOutlined} from '@mui/icons-material';
 import HeaderMenu from './HeaderMenu';

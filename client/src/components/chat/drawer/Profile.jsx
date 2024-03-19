@@ -1,5 +1,5 @@
 import {useContext} from 'react'
-import { AccountContext } from '../../context/AccountProvider';
+import { AccountContext } from '../../../context/AccountProvider.jsx';
 import {Edit}from '@mui/icons-material';
 import "../../../style/Profile.css";
 
