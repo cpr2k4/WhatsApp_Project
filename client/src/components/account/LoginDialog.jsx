@@ -4,6 +4,7 @@ import {qrCodeImage} from "../../constants/constData.js"
 import { GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from 'jwt-decode';
 import {AccountContext} from '../context/AccountProvider.jsx';
+import { addUser } from '../../service/api.js';
 import "../../style/LoginDialog.css";
 
 const dialogStyle = {
@@ -19,10 +20,14 @@ const dialogStyle = {
 const LoginDialog = () => {
 
   //googleLogin
-  const onLoginSuccess = (res)=>{
+  
+  const onLoginSuccess = async(res)=>{
     const decodedInfo = jwtDecode(res.credential);
     setAccount(decodedInfo);
+    //storing user info in DB
+    await addUser(decodedInfo);
   }
+
   const onLoginError = (res)=>{
     console.log(res);
   }
