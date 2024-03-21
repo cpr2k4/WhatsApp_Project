@@ -6,6 +6,7 @@ const Footer = () => {
     <div>
       <EmojiEmotionsOutlined />
       <AttachFile />
+      
     </div>
   )
 }
