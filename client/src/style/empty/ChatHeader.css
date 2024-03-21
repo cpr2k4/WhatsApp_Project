@@ -1,0 +1,37 @@
+.ChatHeader{
+    height: 41.5px;
+    display: flex;
+    align-items: center;
+    background-color: #f0f2f5;
+    border-left: 1px solid rgba(128, 128, 128, 0.24);
+    padding: 8px 16px;
+}
+
+.ChatHeader_dp{
+    height:40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.ChatHeader_name{
+    margin: 8px 0 4px 14px;
+}
+
+.ChatHeader_status{
+    margin: 0 14px;
+    margin-bottom: 8px;
+    font-size: 10px;
+    color: rgba(0, 0, 0,0.6);
+}
+
+.ChatHeader_icons_box{
+    margin-left: auto;
+}
+
+.ChatHeader_icons_box > *{
+    cursor: pointer;
+    padding: 0.5rem;
+    margin: 0.2rem 0.3rem 0 0.3rem;
+
+}

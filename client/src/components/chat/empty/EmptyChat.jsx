@@ -1,6 +1,6 @@
 import React from 'react'
 import {LockPerson} from '@mui/icons-material';
-import "../../../style/Empty.css"
+import "../../../style/empty/Empty.css"
 const EmptyChat = () => {
   return (
     <div className='emptyComponent'>

@@ -12,12 +12,13 @@
     background-color: white;
     min-width: 320px;
     width: 40%;
+    border-right: 1px solid rgba(128, 128, 128, 0.25);
     /* min-width: 320px;
     width:615px; */
 }
 
 .rightComponent{
-    background-color:  #f0f2f5 ;
+    background-color:  #f0f2f5;
     min-width: 500px;
     width: 60%;
 }

@@ -1,6 +1,7 @@
 .emptyComponent{
     height: 100%;
     display: flex;
+    background-color: #f0f2f5 ;
     flex-direction: column;
     justify-content: center;
     align-items: center;
