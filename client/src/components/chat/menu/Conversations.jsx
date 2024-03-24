@@ -5,7 +5,7 @@ import { AccountContext } from '../../../context/AccountProvider';
 import {Divider} from '@mui/material'
 import "../../../style/AllConversations.css";
 
-const Conversations = () => {
+const Conversations = ({text}) => {
     const {account} = useContext(AccountContext); 
 
     //all users 
@@ -14,10 +14,11 @@ const Conversations = () => {
     useEffect(()=>{
         const fetchData = async()=>{
             let response = await getUsers();
-            setUsers(response);
+            let filteredUsers = response.filter(user=> user.name.toLowerCase().includes(text.toLowerCase()));
+            setUsers(filteredUsers);
         }   
         fetchData();
-    },[])
+    },[text])
   
   return (
     <div className='allconversationsComponent'>  

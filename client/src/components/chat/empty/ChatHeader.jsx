@@ -1,15 +1,15 @@
 import React from 'react'
-import {Search,MoreVert} from '@mui/icons-material'
+import {Search,MoreVert, PersonOff} from '@mui/icons-material'
 import {defaultProfilePicture} from "../../../constants/constData.js"
 import "../../../style/empty/ChatHeader.css"
 
-const ChatHeader = () => {
+const ChatHeader = ({person}) => {
   return (
     <div className='ChatHeader'>
-      <img src={defaultProfilePicture} alt="dp" className='ChatHeader_dp'/>
+      <img src={person.picture} alt="dp" className='ChatHeader_dp'/>
         <div>
-            <p className='ChatHeader_name'>Name</p>
-            <p className='ChatHeader_status'>Online Status</p>
+            <p className='ChatHeader_name'>{person.name}</p>
+            <p className='ChatHeader_status'>offline</p>
         </div>
         <div className='ChatHeader_icons_box'>
             <Search/>

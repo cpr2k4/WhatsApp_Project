@@ -1,0 +1,31 @@
+.footerContainer{
+    display: flex;
+    height: 60px;
+    background-color: #f0f2f5;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.footerContainer > *{
+    margin: 5px;
+    color: #919191;
+    cursor: pointer;
+}
+
+.searchFooter{
+    background-color: #ffffff;
+    border-radius: 18px;
+    width: calc(95% - 100px);
+}
+
+.inputfieldFooter{
+    width: 100%;
+    padding: 20px;
+    height: 30px;
+    padding-left: 25px;
+    font-size: 14px;
+}
+
+.clipSticker{
+    transform: rotate(40deg);
+}

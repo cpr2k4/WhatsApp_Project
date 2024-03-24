@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from './Footer'
 import "../../../style/empty/Messages.css"
 
-const Messages = () => {
+const Messages = ({person}) => {
   return (
     <div className='Wrapper'>
         <div className='messagesComponent'>
