@@ -10,7 +10,7 @@ const InfoDrawer = ({open,setOpen}) => {
       <Drawer
        open={open} 
        onClose={()=>setOpen(false)}
-       PaperProps={{sx:{width:"39.6%"}}}
+       PaperProps={{sx:{width:"40%"}}}
         sx={{zIndex:"1500"}}>
          
          <div className='drawerHeader'>
