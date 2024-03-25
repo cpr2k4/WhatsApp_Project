@@ -1,15 +1,20 @@
-import React from 'react'
+import {useState} from 'react'
 import { InputBase } from '@mui/material';
 import {EmojiEmotionsOutlined,AttachFile,Mic} from '@mui/icons-material';
 import "../../../style/empty/Footer.css"
 
-const Footer = () => {
+const Footer = ({setValue,sendText}) => {
+  
   return (
     <div className='footerContainer'>
       <EmojiEmotionsOutlined />
       <AttachFile className='clipSticker' />
       <div className='searchFooter'>
-          <InputBase placeholder='Type a message' className='inputfieldFooter'/>
+          <InputBase placeholder='Type a message' 
+            className='inputfieldFooter'
+            onChange={(e)=>setValue(e.target.value)}
+            onKeyPress={(e)=>(sendText(e))}
+          />
       </div>
       <Mic />
     </div>

@@ -30,3 +30,24 @@ export const setConversation = async(data)=>{
         console.log("Error while calling users api...",err.message);
     }
 }
+
+export const getConversation = async(data) =>{
+    try{
+        //we are getting conversation 
+        //but as we are sending senderId and recieverId hence axois.post()
+        let response =  await axios.post(`${URL}/conversation/get`,data);
+        return response.data;
+    }
+    catch(err){
+        console.log("Error while calling getConversation api...",err.message);
+    }   
+}
+
+export const newMessage = async(data)=>{
+    try{
+        axios.post(`${URL}/message/add`,data);
+    }
+    catch(err){
+        console.log("Error while calling newMessage api...",err.message);
+    }
+}
