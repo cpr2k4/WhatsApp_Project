@@ -6,4 +6,5 @@
 .messagesComponent{
     height: 83vh;
     overflow-y: scroll;
+    padding: 0 4rem;
 }

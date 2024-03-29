@@ -1,12 +1,24 @@
-import {useState,useContext} from 'react'
+import {useState,useContext,useEffect} from 'react'
 import Footer from './Footer'
 import {AccountContext} from "../../../context/AccountProvider.jsx"
-import { newMessage } from '../../../service/api'
+import { newMessage,getMessages } from '../../../service/api'
+import Message from './Message.jsx'
 import "../../../style/empty/Messages.css"
 
 const Messages = ({person,conversation}) => {
   const [value,setValue] = useState("");
+  const [messages,setMessages] = useState([]);
+  const [sendMessageFlag,setSendMessageFlag] = useState(false);
   const {account} = useContext(AccountContext);
+
+  useEffect(()=>{
+    const getAllMessages= async()=>{
+      let id = conversation._id;
+      let allmessages = await getMessages(id);
+      setMessages(allmessages);
+    }
+    conversation && conversation._id && getAllMessages();
+  },[person._id,conversation._id,sendMessageFlag]);
 
   const sendText = async(e)=>{
     const code = e.keyCode || e.which;
@@ -19,12 +31,19 @@ const Messages = ({person,conversation}) => {
           text: value
         }
         await newMessage(message);
+
+        setSendMessageFlag(prevValue=>!prevValue);
+        setValue('');
     }
   }
   return (
     <div className='Wrapper'>
         <div className='messagesComponent'>
-          Messages
+          {
+            messages && messages.map((message,idx)=>(
+              <Message message={message} key={idx}/>
+            ))
+          }
         </div>
         <Footer 
           value={value}

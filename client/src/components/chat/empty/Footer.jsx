@@ -3,7 +3,7 @@ import { InputBase } from '@mui/material';
 import {EmojiEmotionsOutlined,AttachFile,Mic} from '@mui/icons-material';
 import "../../../style/empty/Footer.css"
 
-const Footer = ({setValue,sendText}) => {
+const Footer = ({value,setValue,sendText}) => {
   
   return (
     <div className='footerContainer'>
@@ -11,6 +11,7 @@ const Footer = ({setValue,sendText}) => {
       <AttachFile className='clipSticker' />
       <div className='searchFooter'>
           <InputBase placeholder='Type a message' 
+            value={value}
             className='inputfieldFooter'
             onChange={(e)=>setValue(e.target.value)}
             onKeyPress={(e)=>(sendText(e))}

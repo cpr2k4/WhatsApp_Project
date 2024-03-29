@@ -26,10 +26,10 @@ const Conversations = ({text}) => {
           users.map((user,idx)=>(
             //don't show the logged-in user in the chat users
             user.sub!== account.sub && 
-            <>
+            <div key={idx}>
               <Conversation user={user} key={idx}/>
               <Divider className='userDivider'/>
-            </>
+            </div>
           ))
         }
     </div>

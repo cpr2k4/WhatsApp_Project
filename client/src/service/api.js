@@ -14,7 +14,6 @@ export const addUser = async(data)=>{
 export const getUsers = async()=>{
     try{
         let response = await axios.get(`${URL}/users`);
-        console.log(response);
         return response.data;
     }
     catch(err){
@@ -49,5 +48,15 @@ export const newMessage = async(data)=>{
     }
     catch(err){
         console.log("Error while calling newMessage api...",err.message);
+    }
+}
+
+export const getMessages = async(id)=>{
+    try{
+        let response = await axios.get(`${URL}/messages/get/${id}`);
+        return response.data;
+    }
+    catch(err){
+        console.log("Error while calling getMessages api...",err.message);
     }
 }
