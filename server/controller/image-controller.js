@@ -1,0 +1,11 @@
+const url = "http://localhost:8080";
+
+export const uploadFile = async(req,res)=>{
+    if(!request.file){
+        return res.status(404).json("File not found!");
+    }
+    const imageUrl = `${url}/file/${req.file.filename}`;
+    
+    return res.status(200).json(imageUrl);
+}
+    
